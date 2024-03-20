@@ -14,7 +14,7 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "prettier": "^3.2.5",
-    "turbo": "^1.12.4"
+    "turbo": "latest"
   },
   "packageManager": "npm@8.19.4",
   "engines": {
