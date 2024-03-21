@@ -1,12 +1,15 @@
 {
-  "name": "with-npm",
+  "name": "flora",
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "infrastructure/*",
+    "testing/*"
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:node": "turbo run build --filter=@repo/node...",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
@@ -16,7 +19,7 @@
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
-  "packageManager": "npm@8.19.4",
+  "packageManager": "npm@10.2.4",
   "engines": {
     "node": ">=18"
   }

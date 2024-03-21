@@ -1,0 +1,45 @@
+export const transformDutchieCustomers = (inputArray: any, storeId: number) => {
+  const transformedArray = inputArray.map((customer: any) => {
+    return {
+      name: customer.name,
+      firstName: customer.firstName,
+      middleName: customer.middleName,
+      lastName: customer.lastName,
+      dob: customer.dateOfBirth,
+      phone: customer.cellPhone,
+      email: customer.emailAddress,
+      password: "",
+      storeId: storeId,
+      status: "",
+      address: customer.address1,
+      city: customer.city,
+      driversLicense: "",
+      driversLicenseExpiration: "",
+      gender: customer.gender,
+      postalCode: customer.postalCode,
+      medicalIdNumber: customer.mmjidNumber,
+      experienceLevel: "",
+      frequency: "",
+      pastEffectiveness: "",
+      headspace: "",
+      budget: "",
+      diet: "",
+      activityLevel: "",
+      medicationUse: "",
+      alcoholUse: "",
+      cigaretteUse: "",
+      treatmentCategory: "",
+      treatmentSubcategory: "",
+      consumptionMethods: "",
+      isNewCustomer: "",
+      preferNotToSay: "",
+      termsAndConditionsStatus: "",
+      externalProviderId: {
+        dutchie: customer.customerId,
+      },
+      createdBy: 11119,
+      updatedBy: 11119,
+    };
+  });
+  return transformedArray;
+};
